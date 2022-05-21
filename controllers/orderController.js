@@ -6,6 +6,7 @@ class OrderController {
     
     async createOrder(req, res){
         try {
+            console.log('trst')
             const {clientEmail, cart, totalPrice} = req.body
 
             const order = await orderService.create(clientEmail, cart, totalPrice)

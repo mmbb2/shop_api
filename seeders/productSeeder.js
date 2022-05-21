@@ -96,4 +96,4 @@ const categories = [
       },
     ]
 
-ProductModel.bulkCreate(categories, {include: [{model: CategoryModel, as: "category"}]})
+ProductModel.bulkCreate(categories, {include: [{model: CategoryModel, as: "category"}]}).catch((err)=>{console.log(err)})
